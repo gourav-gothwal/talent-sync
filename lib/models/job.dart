@@ -19,19 +19,21 @@ class Job {
     this.isSaved = false,
   });
 
+  /// Create Job object from Firestore/Map
   factory Job.fromMap(Map<String, dynamic> data, String documentId) {
     return Job(
       id: documentId,
-      title: data['title'] ?? '',
-      company: data['company'] ?? '',
-      location: data['location'] ?? '',
-      salary: data['salary'] ?? '',
-      description: data['description'] ?? '',
+      title: data['title'] ?? 'Untitled Job',
+      company: data['company'] ?? 'Unknown Company',
+      location: data['location'] ?? 'Not specified',
+      salary: data['salary'] ?? 'Not disclosed',
+      description: data['description'] ?? 'No description provided.',
       applyUrl: data['applyUrl'] ?? '',
       isSaved: data['isSaved'] ?? false,
     );
   }
-  
+
+  /// Convert Job object to Map (for Firestore saving)
   Map<String, dynamic> toMap() {
     return {
       'title': title,
@@ -42,5 +44,28 @@ class Job {
       'applyUrl': applyUrl,
       'isSaved': isSaved,
     };
+  }
+
+  /// Copy Job with updated fields (useful for updating saved status, etc.)
+  Job copyWith({
+    String? id,
+    String? title,
+    String? company,
+    String? location,
+    String? salary,
+    String? description,
+    String? applyUrl,
+    bool? isSaved,
+  }) {
+    return Job(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      company: company ?? this.company,
+      location: location ?? this.location,
+      salary: salary ?? this.salary,
+      description: description ?? this.description,
+      applyUrl: applyUrl ?? this.applyUrl,
+      isSaved: isSaved ?? this.isSaved,
+    );
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "144614727190",
+    "project_id": "talentsync-6675d",
+    "storage_bucket": "talentsync-6675d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144614727190:android:d95a16e31a31a2d0535f37",
+        "android_client_info": {
+          "package_name": "com.example.talent_sync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5bsx4ynr1JRnY1vEchughhP4MthYbK5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

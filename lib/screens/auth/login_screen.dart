@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "HireMatch",
+                  "Talent Sync",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -109,7 +109,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor: Colors.indigo,
                   ),
                   onPressed: _login,
-                  child: const Text("Login"),
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 20),
 
